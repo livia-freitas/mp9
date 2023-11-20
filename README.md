@@ -1,4 +1,4 @@
-# Mini-Project 9
+# Mini-Project 9: Parsing and Producing JSON
 
 ## Authors: Christina Vu, Joyce Gill, and Livia Stein Freitas.
 
