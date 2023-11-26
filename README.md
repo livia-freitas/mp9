@@ -4,8 +4,6 @@
 
 ### A Java implementation of a parser for JSON.
 
----
-
 # Acknowledgements 
 
 https://restfulapi.net/json-data-types/
