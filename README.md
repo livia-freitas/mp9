@@ -8,3 +8,4 @@
 
 https://restfulapi.net/json-data-types/
 
+https://www.youtube.com/watch?v=6JoXp1e8jAQ
