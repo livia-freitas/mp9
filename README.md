@@ -9,3 +9,5 @@
 https://restfulapi.net/json-data-types/
 
 https://www.youtube.com/watch?v=6JoXp1e8jAQ
+
+https://www.geeksforgeeks.org/java-program-to-check-if-two-arrays-are-equal-or-not/
