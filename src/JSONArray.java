@@ -5,7 +5,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * Authors: Livia Stein Freitas, Christina Vu, and Joyce Gill JSON arrays.
+ * Authors: Livia Stein Freitas, Christina Vu, and Joyce Gill 
+ * JSON arrays.
  */
 public class JSONArray implements JSONValue {
 

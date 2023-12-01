@@ -4,7 +4,8 @@ import java.io.PrintWriter;
 import java.math.BigDecimal;
 
 /**
- * Authors: Livia Stein Freitas, Christina Vu, and Joyce Gill JSON reals.
+ * Authors: Livia Stein Freitas, Christina Vu, and Joyce Gill 
+ * JSON reals.
  */
 public class JSONReal implements JSONValue {
 

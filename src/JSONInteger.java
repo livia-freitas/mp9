@@ -5,6 +5,7 @@ import java.math.BigInteger;
 import java.util.Objects;
 
 /**
+ * Authors: Christina Vu, Joyce Gill, and Livia Stein Freitas
  * JSON integers.
  */
 public class JSONInteger implements JSONValue {

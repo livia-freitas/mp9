@@ -4,9 +4,8 @@ import java.io.PrintWriter;
 import java.util.*;
 
 /**
+ * Author: Christina Vu, Joyce Gill, Livia Stein Freitas
  * JSON strings.
- *
- * @author Joyce Gill
  */
 public class JSONString implements JSONValue {
 
