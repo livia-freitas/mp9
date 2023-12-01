@@ -1,4 +1,5 @@
 package src;
+
 import java.io.PrintWriter;
 import java.math.BigInteger;
 import java.util.Objects;
@@ -57,17 +58,19 @@ public class JSONInteger implements JSONValue {
    * Compare to another object.
    */
   public boolean equals(Object other) {
-     if (this == other) return true;
-        if (other == null || getClass() != other.getClass()) return false;
-        JSONInteger that = (JSONInteger) other;
-        return Objects.equals(value, that.value);       // STUB
+    if (this == other)
+      return true;
+    if (other == null || getClass() != other.getClass())
+      return false;
+    JSONInteger that = (JSONInteger) other;
+    return Objects.equals(value, that.value); // STUB
   } // equals(Object)
 
   /**
    * Compute the hash code.
    */
   public int hashCode() {
-    return Objects.hash(value);        // STUB
+    return Objects.hash(value); // STUB
   } // hashCode()
 
   // +--------------------+------------------------------------------
@@ -78,7 +81,7 @@ public class JSONInteger implements JSONValue {
    * Write the value as JSON.
    */
   public void writeJSON(PrintWriter pen) {
-    pen.write(this.toString());                 // STUB
+    pen.write(this.toString()); // STUB
   } // writeJSON(PrintWriter)
 
   /**

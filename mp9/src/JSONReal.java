@@ -1,10 +1,10 @@
 package src;
+
 import java.io.PrintWriter;
 import java.math.BigDecimal;
 
 /**
- * Authors: Livia Stein Freitas, Christina Vu, and Joyce Gill
- * JSON reals.
+ * Authors: Livia Stein Freitas, Christina Vu, and Joyce Gill JSON reals.
  */
 public class JSONReal implements JSONValue {
 
@@ -57,12 +57,12 @@ public class JSONReal implements JSONValue {
    * Compare to another object.
    */
   public boolean equals(Object other) {
-    if(other instanceof BigDecimal){
-      if(this.value.equals(other)){
+    if (other instanceof BigDecimal) {
+      if (this.value.equals(other)) {
         return true;
-      }//if(this.value.equals(other))
-    }//if(other instanceof BigDecimal)
-    return false;  
+      } // if(this.value.equals(other))
+    } // if(other instanceof BigDecimal)
+    return false;
   } // equals(Object)
 
   /**
@@ -80,7 +80,7 @@ public class JSONReal implements JSONValue {
    * Write the value as JSON.
    */
   public void writeJSON(PrintWriter pen) {
-    pen.write(this.value.toString()); //!!! Check this
+    pen.write(this.value.toString()); // !!! Check this
   } // writeJSON(PrintWriter)
 
   /**

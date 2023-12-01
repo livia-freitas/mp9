@@ -5,10 +5,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * Authors: Livia Stein Freitas, Christina Vu, and Joyce Gill
- * JSON arrays.
+ * Authors: Livia Stein Freitas, Christina Vu, and Joyce Gill JSON arrays.
  */
-public class JSONArray implements JSONValue{
+public class JSONArray implements JSONValue {
 
   // +--------+------------------------------------------------------
   // | Fields |
@@ -39,7 +38,7 @@ public class JSONArray implements JSONValue{
    */
   public String toString() {
     String result = "[";
-    result.concat(this.toStringLoop());
+    result = result.concat(this.toStringLoop());
     return result.concat("]");
   } // toString()
 
@@ -49,7 +48,7 @@ public class JSONArray implements JSONValue{
   public boolean equals(Object other) {
     if (other instanceof JSONArray) {
       JSONArray anotherArray = (JSONArray) other;
-      if(this.values.equals(anotherArray.values)){
+      if (this.values.equals(anotherArray.values)) {
         return true;
       }
     } // if(other instanceof JSONValue)
@@ -124,11 +123,11 @@ public class JSONArray implements JSONValue{
   public String toStringLoop() {
     String body = "";
     // edge case: first element of the array
-    body.concat(this.values.get(0).toString());
+    body = body.concat(this.values.get(0).toString());
     for (int i = 1; i < this.values.size(); i++) {
-      body.concat(", " + this.values.get(i));
-    }//for
+      body = body.concat(", " + this.values.get(i));
+    } // for
     return body;
-  }//toStringLoop()
+  }// toStringLoop()
 
 } // class JSONArray

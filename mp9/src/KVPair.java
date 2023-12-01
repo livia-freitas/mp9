@@ -1,10 +1,10 @@
 package src;
 
 /**
- * Author: Samuel Rebelsky
- * Simple, immutable, key/value pairs
+ * Author: Samuel Rebelsky, Christina Vu, Joyce Gill, and Livia Stein Freitas
+ * Simple key/value pairs
  */
-public class KVPair<K,V> {
+public class KVPair<K, V> {
 
   // +--------+------------------------------------------------------
   // | Fields |
@@ -42,13 +42,13 @@ public class KVPair<K,V> {
   @SuppressWarnings("unchecked")
   @Override
   public boolean equals(Object other) {
-    return ((other instanceof KVPair) && (this.equals((KVPair<K,V>) other)));
+    return ((other instanceof KVPair) && (this.equals((KVPair<K, V>) other)));
   } // equals(Object)
 
   /**
    * Compare for equality.
    */
-  public boolean equals(KVPair<K,V> other) {
+  public boolean equals(KVPair<K, V> other) {
     return ((this.key.equals(other.key)) && (this.value.equals(other.value)));
   } // equals(KVPair<K,V>)
 
@@ -77,4 +77,8 @@ public class KVPair<K,V> {
   public V value() {
     return this.value;
   } // value()
+
+  public void setValue(V value) {
+    this.value = value;
+  }
 } // KVPair<K,V>

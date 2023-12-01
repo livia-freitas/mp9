@@ -8,7 +8,7 @@ import java.util.*;
  *
  * @author Joyce Gill
  */
-public class JSONString implements JSONValue{
+public class JSONString implements JSONValue {
 
   // +--------+------------------------------------------------------
   // | Fields |
@@ -40,10 +40,10 @@ public class JSONString implements JSONValue{
   public String toString() {
     if (value == null) {
       return "null";
-      } else {
-        return this.value.toString();
-      } // else
-    } // toString()
+    } else {
+      return this.value.toString();
+    } // else
+  } // toString()
 
   /**
    * Compare to another object.
@@ -64,7 +64,7 @@ public class JSONString implements JSONValue{
     if (this.value == null)
       return 0;
     else
-      return this.value.hashCode();        
+      return this.value.hashCode();
   } // hashCode()
 
   // +--------------------+------------------------------------------
