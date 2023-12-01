@@ -168,15 +168,17 @@ public class JSON {
     StringBuilder builder = new StringBuilder();
     int ch;
 
-    // ????????
+    // Read until not-numeric element found (e & E are for scientific notation)
     while ((ch = source.read()) != -1 && (Character.isDigit(ch) || ch == '.' || ch == 'e' || ch == 'E' || ch == '-')) {
       builder.append((char) ch);
     } // while
 
+    // Unread non-numeric number
     if (ch != -1) {
       ((PushbackReader) source).unread(ch);
     } // if
 
+    // Determine whether it's a real number of integer
     String numberStr = builder.toString();
     if (numberStr.contains(".") || numberStr.toLowerCase().contains("e")) {
       return new JSONReal(numberStr);
@@ -237,4 +239,3 @@ public class JSON {
     return (' ' == ch) || ('\n' == ch) || ('\r' == ch) || ('\t' == ch);
   } // isWhiteSpace(int)
 } // class JSON
-
