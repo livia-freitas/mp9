@@ -1,7 +1,7 @@
 package src;
 
 /**
- * Author: Samuel Rebelsky, Christina Vu, Joyce Gill, and Livia Stein Freitas
+ * Author: Samuel Rebelsky, Christina Vu, Joyce Gill, and Livia Stein Freitas 
  * Simple key/value pairs
  */
 public class KVPair<K, V> {

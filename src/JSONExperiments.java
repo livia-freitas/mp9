@@ -2,7 +2,8 @@ package src;
 
 import java.io.PrintWriter;
 
-/* Authors: Christina Vu, Joyce Gill, and Livia Stein Freitas
+/*
+ * Authors: Christina Vu, Joyce Gill, and Livia Stein Freitas 
  * Experiments to check that the JSON classes work as expected.
  */
 
@@ -34,7 +35,7 @@ public class JSONExperiments {
     JSONHash hashTest = new JSONHash();
     hashTest.set(stringTest, integerTest);
     pen.println(hashTest.toString());
-    //duplicatet test
+    // duplicatet test
     hashTest.set(stringTest, realTest);
     pen.println(hashTest.toString());
 

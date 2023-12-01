@@ -1,4 +1,5 @@
 package src;
+
 import java.io.PrintWriter;
 import java.util.*;
 
@@ -74,7 +75,7 @@ public class JSONHash implements JSONValue {
     } // if
 
     JSONHash jsonHash = (JSONHash) other;
-   
+
     // Compare the size and content of the hash tables for equality
     return size == jsonHash.size && table.equals(jsonHash.table);
   } // equals(Object)
@@ -83,7 +84,7 @@ public class JSONHash implements JSONValue {
    * Compute the hash code.
    */
   public int hashCode() {
-    return table.hashCode();          
+    return table.hashCode();
   } // hashCode()
 
   // +--------------------+------------------------------------------
@@ -101,7 +102,7 @@ public class JSONHash implements JSONValue {
   /**
    * Get the underlying value.
    */
-  public Iterator<KVPair<JSONString,JSONValue>> getValue() {
+  public Iterator<KVPair<JSONString, JSONValue>> getValue() {
     return this.iterator();
   } // getValue()
 
@@ -119,23 +120,23 @@ public class JSONHash implements JSONValue {
   public void resize() {
     int newCapacity = table.length * 2;
 
-     // Create a new table with the updated capacity
+    // Create a new table with the updated capacity
     KVPair<JSONString, JSONValue>[] newTable = new KVPair[newCapacity];
 
-     // Iterate through the existing entries and rehash them into the new table
+    // Iterate through the existing entries and rehash them into the new table
     for (KVPair<JSONString, JSONValue> entry : table) {
-        if (entry != null) {
-            int index = hash(entry.key());
+      if (entry != null) {
+        int index = hash(entry.key());
 
-            // Find the next available slot in the new table
-            while (newTable[index] != null) {
-                index = (index + 1) % newCapacity;
-            } // while
-            newTable[index] = entry;
-        } // if
+        // Find the next available slot in the new table
+        while (newTable[index] != null) {
+          index = (index + 1) % newCapacity;
+        } // while
+        newTable[index] = entry;
+      } // if
     } // for
     table = newTable;
-} // resize()
+  } // resize()
 
   // +-------------------+-------------------------------------------
   // | Hashtable methods |
@@ -158,7 +159,7 @@ public class JSONHash implements JSONValue {
   /**
    * Get all of the key/value pairs.
    */
-  public Iterator<KVPair<JSONString,JSONValue>> iterator() {
+  public Iterator<KVPair<JSONString, JSONValue>> iterator() {
     return new HashTableIterator();
   } // iterator()
 
@@ -187,13 +188,13 @@ public class JSONHash implements JSONValue {
     else {
       table[index].setValue(value);
     } // else
-} // set(JSONString, JSONValue)
+  } // set(JSONString, JSONValue)
 
   /**
    * Find out how many key/value pairs are in the hash table.
    */
   public int size() {
-    return size;        
+    return size;
   } // size()
 
   /**
@@ -227,5 +228,5 @@ public class JSONHash implements JSONValue {
       return table[currentIndex++];
     } // next()
   } // class HashTableIterator
- 
+
 } // class JSONHash
