@@ -1,10 +1,11 @@
 # Mini-Project 9: Parsing and Producing JSON
 
-## Authors: Christina Vu, Joyce Gill, and Livia Stein Freitas.
+## Authors: Christina Vu, Joyce Gill, and Livia Stein Freitas. (CSC 207)
 
 ### A Java implementation of a parser for JSON.
 
 # Acknowledgements 
+Skeleton code by SamR
 
 https://restfulapi.net/json-data-types/
 
